@@ -1,16 +1,32 @@
-*,
-*:after,
-*::before {
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
 html,
 body,
 .st-container,
 .st-pusher,
 .st-content {
 	height: 100%;
+}
+
+nav {
+	overflow-y: auto;
+}
+
+button {
+	position: fixed;
+	right:0;
+	top:0;
+	z-index: 1000;
+	border: none;
+	padding: 0.6em 1.2em;
+	color: #fff;
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	font-size: 1em;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	cursor: pointer;
+	display: inline-block;
+	margin: 3px 2px;
+	border-radius: 2px;
+	background-color: none;
 }
 
 button.st-effect-1 {
@@ -73,7 +89,7 @@ button.st-effect-1 {
 	right: 0;
 	z-index: 100;
 	visibility: hidden;
-	width: 300px;
+	width: 100%;
 	height: 100%;
 	background: #48a770;
 	-webkit-transition: all 0.5s;
@@ -177,8 +193,8 @@ button.st-effect-1 {
   overflow: hidden;
   margin: 0;
   padding: 0;
-  width: 96px;
-  height: 96px;
+  width: 46px;
+  height: 46px;
   font-size: 0;
   text-indent: -9999px;
   appearance: none;
@@ -196,11 +212,12 @@ button.st-effect-1 {
 .c-hamburger span {
   display: block;
   position: absolute;
-  top: 44px;
-  left: 18px;
-  right: 18px;
-  height: 8px;
-  background: white;
+  top: 20px;
+  left: 9px;
+  right: 9px;
+  height: 4px;
+  width: 30px;
+  background: #333;
 }
 
 .c-hamburger span::before,
@@ -209,22 +226,22 @@ button.st-effect-1 {
   display: block;
   left: 0;
   width: 100%;
-  height: 8px;
-  background-color: #fff;
+  height: 4px;
+  background-color: #333;
   content: "";
 }
 
 .c-hamburger span::before {
-  top: -20px;
+  top: -10px;
 }
 
 .c-hamburger span::after {
-  bottom: -20px;
+  bottom: -10px;
 }
 
 
 .c-hamburger--htx {
-  background-color: #ff3264;
+  background: rgba(255, 255, 255, .1);
 }
 
 .c-hamburger--htx span {
@@ -247,7 +264,7 @@ button.st-effect-1 {
 
 /* active state, i.e. menu open */
 .c-hamburger--htx.is-active {
-  background-color: #cb0032;
+  background-color: #48a770;
 }
 
 .c-hamburger--htx.is-active span {
